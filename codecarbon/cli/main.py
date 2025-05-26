@@ -328,7 +328,7 @@ def config():
 @codecarbon.command("monitor", short_help="Monitor your machine's carbon emissions.")
 def monitor(
     measure_power_secs: Annotated[
-        int, typer.Argument(help="Interval between two measures.")
+        float, typer.Argument(help="Interval between two measures.")
     ] = 10,
     api_call_interval: Annotated[
         int, typer.Argument(help="Number of measures between API calls.")
