@@ -48,7 +48,7 @@ pkgs.mkShell {
       source .venv/bin/activate
     fi
     echo "Virtualenv activated."
-    sudo python -m codecarbon.cli.main monitor 0.001 &
+    python -m codecarbon.cli.main monitor 0.001 > /dev/null 2>&1 &
     CCPID=$!
     pushd ../energy_exp_server
     sudo ./runCC.sh $BENCH $NAME
