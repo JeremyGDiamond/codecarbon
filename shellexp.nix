@@ -51,7 +51,7 @@ pkgs.mkShell {
     python -m codecarbon.cli.main monitor 0.001 > /dev/null 2>&1 &
     CCPID=$!
     pushd ../energy_exp_server
-    sudo ./runCC.sh $BENCH $NAME
+    sudo ./runCC2.sh $BENCH $NAME
     popd
     kill $CCPID
     exit
